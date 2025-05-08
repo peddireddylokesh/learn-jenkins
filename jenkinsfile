@@ -19,6 +19,7 @@ pipeline {
             steps {
                   
                 sh "echo 'This is Deploying...'"
+                error "This is a simulated error in the Deploy stage"
             }
             
         }
