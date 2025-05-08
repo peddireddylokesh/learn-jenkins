@@ -3,24 +3,24 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                script{
-                    sh "thi is Building..."
-                }
+                
+                sh "echo 'This is Building...'"
+                
             }
         }
         stage('Test') {
             steps {
-                  script{
-                    sh "thi is testing..."
-                }
+                  
+                sh "echo 'This is Testing...'"
+                
             }
         }
         stage('Deploy') {
             steps {
-                  script{
-                    sh "thi is deploying..."
-                }
+                  
+                sh "echo 'This is Deploying...'"
             }
+            
         }
     }
 }
