@@ -32,7 +32,7 @@ pipeline {
                   
                 sh "echo 'This is Testing...'"
                 
-            }
+            } 
         }
         stage('Deploy') {
              when {
