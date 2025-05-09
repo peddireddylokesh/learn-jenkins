@@ -38,7 +38,7 @@ pipeline {
             steps {
                   
                 sh "echo 'This is Deploying...'"
-                error "This is error in the Deploy stage"
+                // error "This is error in the Deploy stage"
             }
         }
         stage('PrintParams') {
