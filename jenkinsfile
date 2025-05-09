@@ -41,26 +41,23 @@ pipeline {
                 error "This is error in the Deploy stage"
             }
         }
-        stage('print params') {
-            steps {
-                echo "Hello ${params.PERSON}"
-
-                echo "Biography: ${params.BIOGRAPHY}"
-
-                echo "Toggle: ${params.TOGGLE}"
-
-                echo "Choice: ${params.CHOICE}"
-
-                echo "Password: ${params.PASSWORD}"
-            }
-            
-        }
-            
+    
+    }           
         
-    }
+
     post {
         always {
             echo 'This will always run'
+            echo "Hello ${params.PERSON}"
+
+            echo "Biography: ${params.BIOGRAPHY}"
+
+            echo "Toggle: ${params.TOGGLE}"
+
+            echo "Choice: ${params.CHOICE}"
+
+            echo "Password: ${params.PASSWORD}"
+            // echo "Password: ${params.PASSWORD}" // Do not print passwords in logs
             deleteDir()
         }
         success {
