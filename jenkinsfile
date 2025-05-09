@@ -21,7 +21,7 @@ pipeline {
             steps {
                   
                 sh "echo 'This is Deploying...'"
-                error "This is a simulated error in the Deploy stage"
+                // error "This is a simulated error in the Deploy stage"
             }
             
         }
@@ -29,6 +29,7 @@ pipeline {
     post {
         always {
             echo 'This will always run'
+            deleteDir()
         }
         success {
             echo 'This will run only if the pipeline is successful'
